@@ -27,11 +27,11 @@ describe Stack do
   end
 
   describe '#pop' do
-    context 'empty stack' do
+    context 'when empty stack' do
       it { expect { stack.pop }.to raise_error(EmptyStackException) }
     end
 
-    context 'not empty stack' do
+    context 'when not empty stack' do
       before { stack.push 'myitem' }
       context 'after #pop' do
         before { stack.pop }
@@ -41,11 +41,11 @@ describe Stack do
   end
 
   describe '#top' do
-    context 'empty stack' do
+    context 'when empty stack' do
       it { expect { stack.top }.to raise_error(EmptyStackException) }
     end
 
-    context 'not empty stack' do
+    context 'when not empty stack' do
       before { stack.push 'myitem' }
       it { expect(stack.top).to eq 'myitem' }
 
