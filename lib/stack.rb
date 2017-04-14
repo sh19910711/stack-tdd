@@ -18,14 +18,14 @@ class Stack
   end
 
   def top
-    if @stack.size == 0
+    if @stack.empty?
       raise EmptyStackException
     end
     @stack[0]
   end
 
   def pop
-    if @stack.size == 0
+    if @stack.empty?
       raise EmptyStackException
     end
 
