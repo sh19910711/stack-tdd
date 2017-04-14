@@ -33,9 +33,9 @@ describe Stack do
 
     context 'not empty stack' do
       before { stack.push 'myitem' }
-      context 'pop item' do
+      context 'after #pop' do
         before { stack.pop }
-        it { expect(stack.empty?).to be true }
+        it { expect(stack).to be_empty }
       end
     end
   end
@@ -51,7 +51,7 @@ describe Stack do
 
       context 'after #top' do
         before { stack.top }
-        it { expect(stack.size).to be 1 }
+        it { expect(stack).to_not be_empty }
       end
     end
   end
