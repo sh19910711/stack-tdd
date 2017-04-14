@@ -22,7 +22,7 @@ describe Stack do
   describe '#push' do
     context 'push item' do
       before { stack.push 'myitem' }
-      it { expect(stack.top).to be 'myitem' }
+      it { expect(stack.top).to eq 'myitem' }
     end
   end
 
@@ -47,7 +47,7 @@ describe Stack do
 
     context 'not empty stack' do
       before { stack.push 'myitem' }
-      it { expect(stack.top).to be 'myitem' }
+      it { expect(stack.top).to eq 'myitem' }
 
       context 'after #top' do
         before { stack.top }
