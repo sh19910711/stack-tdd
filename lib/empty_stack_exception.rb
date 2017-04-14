@@ -1,0 +1,1 @@
+class EmptyStackException < StandardError; end
