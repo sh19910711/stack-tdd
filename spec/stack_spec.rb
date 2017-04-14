@@ -4,10 +4,10 @@ describe Stack do
   let(:stack) { Stack.new }
 
   describe '#empty?' do
-    it { expect(stack.empty?).to be_true }
+    it { expect(stack.empty?).to be true }
     context 'push item' do
       before { stack.push 'item' }
-      it { expect(stack.empty?).to be_false }
+      it { expect(stack.empty?).to be false }
     end
   end
 
@@ -35,7 +35,7 @@ describe Stack do
       before { stack.push 'myitem' }
       context 'pop item' do
         before { stack.pop }
-        it { expect(stack.empty?).to be_true }
+        it { expect(stack.empty?).to be true }
       end
     end
   end
